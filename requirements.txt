@@ -1,0 +1,18 @@
+rasa
+requests==2.31.0
+streamlit==1.29.0
+pytest==7.4.4
+pytest-asyncio==0.23.3
+requests_mock==1.11.0
+# python==3.9
+# json
+# logging
+# uuid
+# random
+# re
+
+# Recommendations with Spotify API
+spotipy==2.23.0
+
+# Storing client secrets (Spotify/?)
+dotenv==23.3.1

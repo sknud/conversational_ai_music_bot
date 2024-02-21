@@ -1,0 +1,34 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: recommend music story
+  steps:
+  - intent: music_recommendation
+  - action: action_music_recommendation
+
+- story: album release date query
+  steps:
+  - intent: trivia_release_date
+  - action: action_trivia_release_date
+
+- story: artist biography query
+  steps:
+  - intent: trivia_artist_biography
+  - action: action_trivia_artist_biography
+
+- story: album tracklist query simple
+  steps:
+  - intent: trivia_album_tracklist
+    entities:
+      - album_title: "Thriller"
+  - action: action_trivia_album_tracklist
+
+
