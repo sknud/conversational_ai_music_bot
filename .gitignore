@@ -1,0 +1,40 @@
+# Rasa project files
+/models/
+/credentials.yml
+/.env
+.rasa
+actions/venv/
+__pycache__/
+*.pyc
+
+
+
+# Python virtual environment
+/venv/
+venv
+.venv/
+/ENV/
+/.env/
+
+
+# Cache and __pycache (due to splitting app into different files)
+__pycache__/
+actions/__pycache__/actions.cpython-39.pyc
+.cache
+
+# Logs
+/log/
+
+# IDE files
+.idea/
+.vscode/
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+actions/__pycache__/actions.cpython-39.pyc
+
+
+.cache
+results/

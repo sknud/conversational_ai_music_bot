@@ -1,0 +1,74 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - mood_great
+  - bot_challenge
+  - music_recommendation
+  - trivia_release_date
+  - trivia_artist_biography
+  - trivia_album_tracklist
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_mock_recommendation:
+    - text: "Mock recommendation response."
+
+  utter_mock_release_date:
+    - text: "Mock release date response."
+
+  utter_mock_artist_biography:
+    - text: "Mock artist biography response."
+
+  utter_mock_album_tracklist:
+    - text: "The tracks in 'Thriller' are: Song 1, Song 2, Song 3."
+
+entities:
+  - song_title
+  - album_title
+  - artist
+
+slots:
+  song_title:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: song_title
+
+  album_title:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: album_title
+
+  artist:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: artist
+
+actions:
+  - action_music_recommendation
+  - action_music_trivia
+  - action_trivia_release_date
+  - action_trivia_artist_biography
+  - action_trivia_album_tracklist
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

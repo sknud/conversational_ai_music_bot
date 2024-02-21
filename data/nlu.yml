@@ -1,0 +1,209 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: music_recommendation
+  examples: |
+    - recommend me music similar to [Gimme Shelter](song_title) by [The Rolling Stones](artist)
+    - what songs are similar to [Bohemian Rhapsody](song_title) by [Queen](artist)?
+    - I need songs like [Imagine](song_title) by [John Lennon](artist)
+    - Can you suggest some tracks similar to [Stairway to Heaven](song_title)?
+    - find songs similar to [Hotel California](song_title)
+    - recommend songs similar to [Smells Like Teen Spirit](song_title) by [Nirvana](artist)
+    - what tracks are like [Billie Jean](song_title) by [Michael Jackson](artist)?
+    - suggest me music in the style of [Uptown Funk](song_title)
+    - find songs similar to [Shape of You](song_title) by [Ed Sheeran](artist)
+    - give me recommendations for songs like [Sweet Child o' Mine](song_title) please
+    - what are some tracks similar to [Blinding Lights](song_title) by [The Weeknd](artist)?
+    - recommend music that's comparable to [Wish You Were Here](song_title) by [Pink Floyd](artist)
+    - I'm in the mood for songs similar to [Hey Jude](song_title), any suggestions?
+    - find me tracks in the same vein as [Thriller](song_title) by [Michael Jackson](artist)
+    - suggest songs like [Boogie Wonderland](song_title) by [Earth, Wind & Fire](artist)
+    - I want to hear songs like [Creep](song_title) by [Radiohead](artist)
+    - Can you recommend music similar to [Halo](song_title) by [Beyoncé](artist)?
+    - Suggest tracks like [imagine](song_title) by [John Lennon](artist)
+    - Find me songs similar to [yesterday](song_title) by [The Beatles](artist)
+
+- intent: trivia_release_date
+  examples: |
+    - When was [Thriller](album_title) released?
+    - Release date of [To Pimp a Butterfly](album_title)
+    - What's the release date of [Rumours](album_title) by [Fleetwood Mac](artist)?
+    - When did [Revolver](album_title) come out?
+    - Date [Born This Way](album_title) was released
+    - Tell me when [The Dark Side of the Moon](album_title) was published?
+    - What is the release date for [Back in Black](album_title)?
+    - When was [Nevermind](album_title) by [Nirvana](artist) released?
+    - Do you know the release date of [The Wall](album_title)?
+    - I would like to know the release date of [Abbey Road](album_title) by [The Beatles](artist)
+    - When did [Purple Rain](album_title) by [Prince](artist) come out?
+    - Release year of [Hotel California](album_title) by [Eagles](artist)
+    - Date of release for [OK Computer](album_title) by [Radiohead](artist)
+    - What year was [A Night at the Opera](album_title) by [Queen](artist) released?
+    - Can you tell me when [London Calling](album_title) by [The Clash](artist) was released?
+
+
+- intent: trivia_artist_biography
+  examples: |
+    - Tell me about [Coldplay](artist)
+    - Biography of [The Rolling Stones](artist)
+    - Who is [Adele](artist)?
+    - Information about [Beyoncé](artist)
+    - Can you give me details on [Bob Dylan](artist)?
+    - I want to know more about [Taylor Swift](artist)
+    - Who are [The Beatles](artist)?
+    - Give me a biography of [Elvis Presley](artist)
+    - Details about [Rihanna](artist)
+    - Background of [Ed Sheeran](artist)
+    - Tell me about [Kanye West](artist)
+    - Who is [Bruce Springsteen](artist)?
+    - Info on [Lady Gaga](artist)
+    - Life story of [Michael Jackson](artist)
+    - Who was [Freddie Mercury](artist)?
+    - Can you tell me about [Madonna](artist)?
+    - Facts about [Prince](artist)
+    - What do you know about [Elton John](artist)?
+    - I'd like to hear about [Jay-Z](artist)
+    - Bio of [David Bowie](artist)
+    - History of [Nirvana](artist)
+    - Who is [Kendrick Lamar](artist)?
+    - Tell me about [Ariana Grande](artist)
+    - Information on [The Weeknd](artist)
+    - Can you tell me about [Frank Sinatra](artist)?
+    - Who was [John Lennon](artist)?
+    - Details on [Dua Lipa](artist)
+    - What's the story of [Drake](artist)?
+    - Can you give me a biography of [Pink Floyd](artist)?
+    - I'd like details on [Eminem](artist)
+    - Who is [Billy Joel](artist)?
+    - Tell me about [Led Zeppelin](artist)
+    - Biography of [Mariah Carey](artist)
+    - Information about [AC/DC](artist)
+    - Details on [Janis Joplin](artist)
+    - Who is [Katy Perry](artist)?
+    - I want to know about [Stevie Wonder](artist)
+    - Tell me about [Red Hot Chili Peppers](artist)
+    - Who were [The Doors](artist)?
+    - Life of [Snoop Dogg](artist)
+    - Can you tell me about [Celine Dion](artist)?
+    - Info on [Whitney Houston](artist)
+    - Biography of [Bob Marley](artist)
+    - Who is [Sam Smith](artist)?
+    - Tell me about [Lana Del Rey](artist)
+    - Who was [Jimi Hendrix](artist)?
+    - Can you tell me about [Shakira](artist)?
+    - What do you know about [Justin Bieber](artist)?
+    - I'd like to hear about [Bruno Mars](artist)
+    - Bio of [Miley Cyrus](artist)
+    - History of [Green Day](artist)
+    - Who is [Lorde](artist)?
+    - Tell me about [The Police](artist)
+    - Information on [U2](artist)
+    - Can you tell me about [Cardi B](artist)?
+    - Who was [Aretha Franklin](artist)?
+    - Details on [Pharrell Williams](artist)
+    - What's the story of [Aerosmith](artist)?
+    - Can you give me a biography of [The Clash](artist)?
+    - I'd like details on [Metallica](artist)
+    - Who is [Ray Charles](artist)?
+    - Tell me about [Linkin Park](artist)
+    - Biography of [Justin Timberlake](artist)
+    - Information about [Nicki Minaj](artist)
+    - Details on [Johnny Cash](artist)
+    - Who is [Amy Winehouse](artist)?
+    - I want to know about [KISS](artist)
+    - Tell me about [Pearl Jam](artist)
+    - Who were [The Eagles](artist)?
+    - Life of [Lil Wayne](artist)
+    - Can you tell me about [Britney Spears](artist)?
+    - Info on [Maroon 5](artist)
+    - Biography of [Foo Fighters](artist)
+    - Who is [Chris Brown](artist)?
+    - Tell me about [Oasis](artist)
+    - Information on [The Cure](artist)
+    - Can you tell me about [Sia](artist)?
+    - Who was [George Michael](artist)?
+    - Details on [Alicia Keys](artist)
+    - What's the story of [The Kinks](artist)?
+    - Can you give me a biography of [Guns N' Roses](artist)?
+
+- intent: trivia_album_tracklist
+  examples: |
+    - What are the tracks in [The Eminem Show](album_title) by [Eminem](artist)?
+    - List the songs in [Back to Black](album_title) by [Amy Winehouse](artist)
+    - Tracklist of [Born to Die](album_title) by [Lana Del Rey](artist)
+    - Show me the songs from [Good Kid, M.A.A.D City](album_title) by [Kendrick Lamar](artist)
+    - What songs are on [1989](album_title) by [Taylor Swift](artist)?
+    - Can you list the tracks in [Nevermind](album_title)?
+    - What are the songs on [Abbey Road](album_title)?
+    - Show me the track listing for [Dark Side of the Moon](album_title)
+    - Tracks in [A Night at the Opera](album_title) by [Queen](artist)
+    - List all songs from [Sticky Fingers](album_title) by [The Rolling Stones](artist)
+    - Tracklist for [Blackstar](album_title) by [David Bowie](artist)
+    - What's on the [Thriller](album_title) album?
+    - Songs in [Rumours](album_title)
+    - Can you show the tracks on [Blonde](album_title) by [Frank Ocean](artist)?
+    - What tracks are in [Hunky Dory](album_title)?
+    - I want to know the songs in [Led Zeppelin IV](album_title) by [Led Zeppelin](artist)
+    - Tell me the tracklist of [Blue](album_title) by [Joni Mitchell](artist)
+    - List tracks on [The Joshua Tree](album_title)
+    - How many songs in [The Wall](album_title) by [Pink Floyd](artist)?
+    - How many songs in [thriller](album_title)?
+
+
+
+
+
+
