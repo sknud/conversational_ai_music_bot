@@ -1,10 +1,9 @@
-import requests
 import re
 import logging
 import json
-import streamlit as st
+import requests
 from utils.logger import SingletonLogger
-# from src.streamlit.utils.logger import SingletonLogger
+import streamlit as st
 
 logger = SingletonLogger.get_instance()
 
@@ -61,6 +60,9 @@ def process_rasa_response(response_json):
 
 
 def manage_chat_session(device_id, session_id, rasa_endpoint):
+    # Initialize bot_message with a default value
+    bot_message = "Error! Please wait 10 seconds and try again."
+
     # Check if a message has been sent by the user
     if prompt := st.chat_input("Enter your message: "):
 
@@ -80,8 +82,17 @@ def manage_chat_session(device_id, session_id, rasa_endpoint):
                 # Code for debugging in the terminal
                 print("Raw bot_message:", bot_message)  # Print the raw response
 
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
+            except requests.exceptions.RequestException as e:
+                st.error(f"Failed to connect to Rasa server: {e}")
+                logger.error("Failed to connect to Rasa server: %s", e)
+
+            except ValueError as ve:
+                st.error(f"Failed to get response from Rasa: {ve}")
+                logger.error("Failed to get response from Rasa: %s", ve)
+
+            except Exception as ex:
+                st.error(f"An unexpected error occurred: {ex}")
+                logger.error("An unexpected error occurred: %s", ex)
 
         # Append bot's message to session state for display
         st.session_state.messages.append({"role": "assistant", "content": bot_message})
