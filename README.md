@@ -1,11 +1,17 @@
-# music_chatbot
+# conversational_ai_music_bot
 
-This music chatbot currently covers the following use cases.
-For recommendations:
+![cover_photo]('_09dec6e1-4851-4744-974c-d6fe37895f71.jpg')
+
+This repo is a work in progress. It demonstrates a music chatbot that can converse with users about music use cases.
+
+The following functionality is currently coverered:
+
+
+###### For recommendations:
 - music recommendations via artist
 - music recommendations via song title
 
-For music trivia questions:
+###### For music trivia questions:
 - Album Release Date Questions
 - Album Tracklist Questions
 - Artist Biography Questions
@@ -24,19 +30,19 @@ Mac Instructions. For Windows or Linux, please see here: https://rasa.com/docs/r
 1. See https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository for more details.
 
 ## How to set up your RASA environment, using Python version 3.9
-How to set up 
+How to set up
 1. Create a virtual env using python 3.9: python3.9 -m venv ./venv
 2. Activate the virtual env: source ./venv/bin/activate
 3. Make sure pip is up to date: pip3 install -U pip
 4. Install rasa: pip3 install rasa
-5. Install other requirements: ?
+5. Install other requirements: pip install -r requirements.txt
 6. Next you need to set up your client credentials, see the next section
 
 ## How to set up client credentials. For example, for use of the Spotify API
 1. Go to the .env.example file in the root directory
 2. Rename .env.example to .env
 3. Add the credentials in for each. The services needed are listed below:
-    - Spotify: https://developer.spotify.com/documentation/web-api 
+    - Spotify: https://developer.spotify.com/documentation/web-api
     - Last FM: https://www.last.fm/api/authentication
 
 
@@ -44,7 +50,7 @@ How to set up
 
 ## Install Streamlit
 1. pip install streamlit
-2. Check it is working (streamlit will launch in a browser window): streamlit hello 
+2. Check it is working (streamlit will launch in a browser window): streamlit hello
 3. To stop the Streamlit server, press: ctrl-C
 4. Press deactivate if you want to exist the venv
 
@@ -54,14 +60,14 @@ How to set up
 2. Split terminal
 3. Run the action server rasa run actions (make sure you are in the correct folder!)
 4. Split terminal again
-5. In the new split terminal, run the streamlit app (make sure you are in the correct folder, cd streamlit): streamlit run main.py 
+5. In the new split terminal, run the streamlit app (make sure you are in the correct folder, cd streamlit): streamlit run main.py
 6. The app will launch in a new window!
 
 7. Alternatively; just run this to test the bot in the command line: rasa shell nlu
 
 ## How to train the model
 1. Make changes
-2. Run: rasa train 
+2. Run: rasa train
 3. Use above steps
 
 ### How to run tests ###
@@ -84,7 +90,7 @@ This will perform NLU model evaluation with cross-validation by splitting the tr
 ## 3. Test the the entire project (NLU, stories/rules, end-to-end conversations)
 This will test:
 - NLU evaluation: how well the model classifies intents and extracts entities based on the provided examples in the NLU training data using metrics such as precision, recall, and f1-score for intents and entities
-- Dialogue Management (Core): tests stories and rules 
+- Dialogue Management (Core): tests stories and rules
 - [Not utilising] End to End testing: test conversations if end-to-end examples are place in the tests/ directory
 1. run: rasa test
 
