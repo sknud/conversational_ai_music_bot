@@ -6,7 +6,6 @@ This repo is a work in progress. It demonstrates a music chatbot that can conver
 
 The following functionality is currently coverered:
 
-
 ###### For recommendations:
 - music recommendations via artist
 - music recommendations via song title
