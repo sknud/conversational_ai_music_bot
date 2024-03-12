@@ -9,13 +9,12 @@ def run_chat_interface():
 
     if "messages" not in st.session_state:
         st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
-        
 
     for msg in st.session_state.messages:
         st.chat_message(msg["role"]).write(msg["content"])
 
     device_id = generate_device_id()
     session_id = generate_session_id()
-    config_file_path = 'config.yml'
+    config_file_path = 'src/streamlit/config.yml'
     rasa_endpoint = load_rasa_endpoint(config_file_path)
     manage_chat_session(device_id, session_id, rasa_endpoint)
