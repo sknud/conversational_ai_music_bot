@@ -1,7 +1,8 @@
 import random
 import uuid
 import logging
-from src.streamlit.utils.logger import SingletonLogger
+from utils.logger import SingletonLogger
+# from src.streamlit.utils.logger import SingletonLogger
 
 logger = SingletonLogger.get_instance()
 
