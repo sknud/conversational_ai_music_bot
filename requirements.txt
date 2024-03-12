@@ -14,5 +14,6 @@ requests_mock==1.11.0
 # Recommendations with Spotify API
 spotipy==2.23.0
 
-# Storing client secrets (Spotify/?)
-dotenv==23.3.1
+# Storing client secrets (Spotify/LastFM)
+# dotenv==23.3.1
+python-dotenv
