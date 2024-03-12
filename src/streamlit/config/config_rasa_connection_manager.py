@@ -24,10 +24,6 @@ def load_rasa_endpoint(config_file_path, use_local=True):
 
     except FileNotFoundError as e:
         print(f"Error: {e}")
-        # Provide a default endpoint or raise an exception
-        default_endpoint = "http://localhost:5005/webhooks/rest/webhook"
-        print(f"Using default endpoint: {default_endpoint}")
-        return default_endpoint
 
     except (KeyError, json.JSONDecodeError) as e:
         print(f"Error: {e}")
