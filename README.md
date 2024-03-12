@@ -1,6 +1,6 @@
 # conversational_ai_music_bot
 
-![cover_photo]('_09dec6e1-4851-4744-974c-d6fe37895f71.jpg')
+![cover_photo.jpg]('_09dec6e1-4851-4744-974c-d6fe37895f71.jpg')
 
 This repo is a work in progress. It demonstrates a music chatbot that can converse with users about music use cases.
 
