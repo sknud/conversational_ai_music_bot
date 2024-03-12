@@ -2,8 +2,8 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
-from src.actions.api.recommendations_app import get_recommendations
-from src.actions.api.music_trivia_app import get_album_release_date, get_artist_biography, get_album_tracklist
+from api.recommendations_app import get_recommendations
+from api.music_trivia_app import get_album_release_date, get_artist_biography, get_album_tracklist
 import os
 
 
@@ -14,7 +14,7 @@ class ActionMusicRecommendation(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
+
         recommendations = None
 
         song_title = tracker.get_slot("song_title") or next((e.get("value") for e in tracker.latest_message['entities'] if e.get("entity") == "song_title"), None)
@@ -47,7 +47,7 @@ class ActionMusicRecommendation(Action):
         dispatcher.utter_message(text=message)
         return []
 
-    
+
 class ActionTriviaReleaseDate(Action):
 
     def name(self) -> Text:
@@ -92,7 +92,7 @@ class ActionTriviaArtistBiography(Action):
             if artist_name:
                 biography = "Sample biography for artist."
             else:
-                biography = "No artist name provided."  
+                biography = "No artist name provided."
         else:
             # Real API call
             biography = get_artist_biography(artist_name)
@@ -138,12 +138,12 @@ class ActionTriviaAlbumTrackList(Action):
         else:
             # Could not recognise album title in user message - normally due to entity recognition limitations
             dispatcher.utter_message(text="I couldn't recognise an album name in your message. You might have to ask about a more popular album!")
-        
+
         return []
 
 
 
-    
 
 
-    
+
+
